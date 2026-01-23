@@ -13,13 +13,7 @@ int main() {
         return 1;
     }
 
-    bme.set_sampling(
-        BME280::SensorMode::FORCED,
-        BME280::SensorSampling::OVERSAMPLING_X1,  // temperature
-        BME280::SensorSampling::OVERSAMPLING_X1,              // pressure off
-        BME280::SensorSampling::OVERSAMPLING_X1,              // humidity off
-        BME280::SensorFilter::OFF
-    );
+    bme.set_sampling();
 
     while (true) {
 
